@@ -1,12 +1,34 @@
-# Ignored directories and root files
-backend/
-docs/
+# Dependencies
 node_modules/
+frontend/node_modules/
+backend/node_modules/
+
+# Build artifacts
+dist/
+frontend/dist/
+backend/dist/
+
+# Environment files (exclude secrets, keep examples)
 .env
 .env.*
-*.log
+!.env.example
+backend/.env
+backend/.env.*
+!backend/.env.example
+frontend/.env
+frontend/.env.*
+!frontend/.env.example
 
-# Frontend specific ignores
-frontend/node_modules/
-frontend/dist/
-frontend/.env*
+# SQLite temporary journals
+*.db-journal
+*.log
+npm-debug.log*
+
+# OS & Editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Temporary publish directories
+_backend_repo/

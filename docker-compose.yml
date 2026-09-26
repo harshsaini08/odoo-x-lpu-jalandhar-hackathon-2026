@@ -1,0 +1,30 @@
+version: '3.8'
+
+services:
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    container_name: stocksense-backend
+    restart: always
+    ports:
+      - "5000:5000"
+    environment:
+      - PORT=5000
+      - DATABASE_URL=file:./dev.db
+      - JWT_SECRET=stocksense_super_secret_jwt_key_hackathon_2026
+      - NODE_ENV=production
+      - DEMO_OTP=123456
+    volumes:
+      - ./backend/prisma/dev.db:/app/prisma/dev.db
+
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    container_name: stocksense-frontend
+    restart: always
+    ports:
+      - "3000:80"
+    depends_on:
+      - backend

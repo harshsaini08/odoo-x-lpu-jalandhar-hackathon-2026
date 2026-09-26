@@ -1,0 +1,28 @@
+{
+  "name": "stocksense-root",
+  "version": "1.0.0",
+  "description": "StockSense - Intelligent Inventory Operations Platform",
+  "private": true,
+  "scripts": {
+    "dev:backend": "npm --prefix backend run dev",
+    "dev:frontend": "npm --prefix frontend run dev",
+    "dev": "npm run dev:backend",
+    "build:backend": "npm --prefix backend run build",
+    "build:frontend": "npm --prefix frontend run build",
+    "build": "npm run build:backend && npm run build:frontend",
+    "seed": "npm --prefix backend run seed",
+    "test": "npm --prefix backend run test",
+    "test:doc": "npm --prefix backend run test:doc",
+    "start": "npm --prefix backend run start"
+  },
+  "keywords": [
+    "inventory-management",
+    "odoo",
+    "stocksense",
+    "digital-twin",
+    "reorder-advisor",
+    "health-score"
+  ],
+  "author": "Hackathon Team",
+  "license": "MIT"
+}
