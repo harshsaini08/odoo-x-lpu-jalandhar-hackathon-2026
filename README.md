@@ -62,24 +62,27 @@ Segments inventory into four aging tiers based on last activity:
 * **Slow Moving (61–90 days)**: Sluggish demand velocity
 * **Dead Stock (90+ days)**: Non-moving tied-up working capital ($)
 
-### 6. 🚨 Rule-Based Anomaly Detection Engine
+### 6. 📈 AI-Assisted Demand Forecasting & Trend Modeling
+* **90-Day Time-Series Historical Analysis**: Real inventory consumption profiles (Stable, Increasing, Decreasing, Seasonal, Irregular, Slow-Moving).
+* **Deterministic Projections**: Weighted moving average and exponential smoothing modeling 30, 60, and 90-day consumption.
+* **Explainable Math**: Complete breakdown showing daily velocity, historical variance, supplier lead times, and safety thresholds.
+* **One-Click Reorder Intake**: Prefills vendor purchase receipt with recommended quantities and target warehouse.
+
+### 7. 🤖 StockSense Copilot Floating Assistant
+* **Natural-Language Guidance**: Step-by-step application walkthroughs (*"How do I create a receipt?"*, *"How do I transfer stock?"*) with direct action navigation buttons.
+* **Real Database Answers**: Live queries of stock levels, upcoming stockouts, recent deliveries, and warehouse capacities with zero hallucination.
+* **Safe Action Preparation**: Translates natural language requests (*"Transfer 20 steel rods from Main Warehouse to Production"*) into structured, pre-validated action cards requiring explicit user confirmation.
+
+### 8. 🚨 Rule-Based Anomaly Detection Engine
 * High-variance physical count adjustments ($>25\%$ or $\ge 10$ units)
 * Outbound demand velocity spikes ($>2.5\times$ daily average)
 * Blocked negative stock attempts during order fulfillment
 
-### 7. ⚡ Global Command Center (`Ctrl+K` / `⌘K`)
-Deterministic natural language intent parser:
-* `"steel"` $\rightarrow$ Product detail & movement ledger
-* `"low stock"` $\rightarrow$ Filtered view of low-stock items
-* `"pending deliveries"` $\rightarrow$ Customer dispatch queue
-* `"warehouse 1"` $\rightarrow$ Digital twin rack map
-* `"transfers today"` $\rightarrow$ Scheduled internal transfers
-* `"demo"` $\rightarrow$ Launches Interactive Hackathon Scenario
+### 9. ⚡ Global Command Center & Navigation
+* Grouped enterprise hierarchy: `MAIN`, `INVENTORY`, `OPERATIONS`, `WAREHOUSES`, `INTELLIGENCE`, `REPORTS`, `SYSTEM`.
+* Global **`+ Create`** Quick Action button in top header.
 
-### 8. ☀️ Smart Daily Operations Brief
-Greets managers with summarized counters and prioritized one-click operational shortcuts (*Reorder Steel Rods*, *Fulfill Deliveries*, *Validate Dock Intake*).
-
-### 9. 📜 Immutable Stock Ledger
+### 10. 📜 Immutable Stock Ledger
 Continuous audit log with before/after global stock baselines, before/after location rack quantities, transaction timestamps, reference documents, user operator signatures, and **one-click CSV export**.
 
 ---
