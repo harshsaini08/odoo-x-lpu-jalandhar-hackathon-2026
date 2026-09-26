@@ -18,10 +18,11 @@ app.use(express.json({ limit: '10mb' }));
 app.use(express.urlencoded({ extended: true, limit: '10mb' }));
 
 // Health Check
-app.get('/health', (req, res) => {
+app.get(['/health', '/api/health'], (req, res) => {
   res.json({
     status: 'healthy',
     platform: 'StockSense',
+    version: '2.0.0',
     timestamp: new Date().toISOString(),
   });
 });
